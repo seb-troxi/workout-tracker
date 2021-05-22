@@ -26,6 +26,9 @@ class CalenderFragment : Fragment() {
         calenderViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+
+
         return root
     }
 }
