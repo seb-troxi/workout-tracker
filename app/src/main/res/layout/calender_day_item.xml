@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calender_day">
+
+    <data>
+        <variable
+            name="selected"
+            type="Boolean"
+            />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{selected ? @drawable/check_box : @drawable/check_box_outline }"
+        />
+</layout>

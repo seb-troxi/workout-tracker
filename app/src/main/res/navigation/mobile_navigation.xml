@@ -21,7 +21,8 @@
         android:id="@+id/navigation_calender"
         android:name="com.example.miniproject.ui.calender.CalenderFragment"
         android:label="@string/title_calender"
-        tools:layout="@layout/fragment_calender" />
+        tools:layout="@layout/fragment_calender" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_videos"
