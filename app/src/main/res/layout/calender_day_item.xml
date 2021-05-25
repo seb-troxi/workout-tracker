@@ -6,14 +6,21 @@
 
     <data>
         <variable
-            name="selected"
-            type="Boolean"
+            name="dayItem"
+            type="com.example.miniproject.data.calender.DayItem"
+            />
+
+        <variable
+            name="clickListener"
+            type="com.example.miniproject.adapters.DayItemClickListener"
             />
     </data>
 
     <TextView
+        android:layout_margin="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@{selected ? @drawable/check_box : @drawable/check_box_outline }"
+        android:background="@{dayItem.selected ? @drawable/check_box : @drawable/check_box_outline }"
+        android:onClick="@{() -> clickListener.onClick(dayItem)}"
         />
 </layout>

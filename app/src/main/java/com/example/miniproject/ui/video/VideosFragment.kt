@@ -22,10 +22,6 @@ class VideosFragment : Fragment() {
         videosViewModel =
                 ViewModelProvider(this).get(VideosViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_videos, container, false)
-        val textView: TextView = root.findViewById(R.id.text_videos)
-        videosViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }

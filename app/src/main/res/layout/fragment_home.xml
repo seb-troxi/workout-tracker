@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/text_home"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/home_welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingBottom="10dp"
+            android:text="This weeks progress :)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_welcome_text">
+
+            <TextView
+                android:id="@+id/day_mon1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Mon"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_tue1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Tue"
+                app:layout_constraintStart_toEndOf="@id/day_mon1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_wen1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Wen"
+                app:layout_constraintStart_toEndOf="@id/day_tue1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_thu1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Thu"
+                app:layout_constraintStart_toEndOf="@id/day_wen1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_fri1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Fri"
+                app:layout_constraintStart_toEndOf="@id/day_thu1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_sat1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sat"
+                app:layout_constraintStart_toEndOf="@id/day_fri1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/day_sun1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sun"
+                app:layout_constraintStart_toEndOf="@id/day_sat1"
+                app:layout_constraintTop_toBottomOf="@id/calender_month"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="-16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
